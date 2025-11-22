@@ -4,13 +4,12 @@ A probability exploration tool built with **Python** and **Streamlit**
 ---
 
 🔗 **Live App:** https://meu-app.streamlit.app/  
-*(Você pode ajustar esse link após o deploy.)*
 
 ---
 
 ## 📸 Screenshots
 
-![Simulator](images/simulator.png)
+![Simulator](https://github.com/willyanbertolino/generalized-monty-hall-simulator/blob/main/assets/simulator.png)
 ![Compare](images/compare.png)
 
 ---
