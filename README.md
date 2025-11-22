@@ -3,7 +3,7 @@ A probability exploration tool built with **Python** and **Streamlit**
 
 ---
 
-🔗 **Live App:** https://meu-app.streamlit.app/  
+🔗 **Live App:** [https://meu-app.streamlit.app](https://generalized-monty-hall-simulator.streamlit.app/)
 
 ---
 
@@ -78,15 +78,15 @@ A complete conceptual guide covering:
 ## 📐 Mathematical Formulas (Included in App)
 
 ### **Stay Strategy**
-\[
+$$
 P(\text{win | stay}) = \frac{1}{N}
-\]
+$$
 
 ### **Single Switch**
-\[
-P(\text{win | single switch}) 
+$$
+P(\text{win | single switch})
     = \frac{N - 1}{N} \cdot \frac{1}{N - K - 1}
-\]
+$$
 
 ### **Sequential Switch**
 No simple closed-form exists for general **N, K** — simulation is required.
