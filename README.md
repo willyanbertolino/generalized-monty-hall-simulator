@@ -10,7 +10,7 @@ A probability exploration tool built with **Python** and **Streamlit**
 ## 📸 Screenshots
 
 ![Simulator](https://github.com/willyanbertolino/generalized-monty-hall-simulator/blob/main/assets/simulator.png)
-![Compare](images/compare.png)
+![Compare](https://github.com/willyanbertolino/generalized-monty-hall-simulator/blob/main/assets/compare.png)
 
 ---
 
