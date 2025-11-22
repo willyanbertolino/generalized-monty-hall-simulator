@@ -5,6 +5,7 @@ from logic.montyhall import play_once
 def run_simulation(N: int, K: int, strategy: str, n_sim: int, switch: bool):
     results = []
 
+    # Simulate
     for _ in range(n_sim):
         play = play_once(N, K, strategy, switch)
         results.append(play)
@@ -12,6 +13,7 @@ def run_simulation(N: int, K: int, strategy: str, n_sim: int, switch: bool):
     df = pd.DataFrame(results)
     win_rate = df["win"].mean()
 
+    # Construct the Bayes table for the first simulation
     first_sim = df.iloc[0]
     bayes_df = bayes_table(N, first_sim)
 
@@ -29,9 +31,9 @@ def bayes_table(N: int, sim):
     revealed_doors = sim['Revealed']
     initial_door = sim['Player choice'][0]
 
+    # Calculate the likelihood
     l = [None] * N
     for i in range(N):
-        print(f'Revealed_doors {revealed_doors}')
         if i in revealed_doors:
             l[i] = 0
             df.loc[f'Door {i+1}', 'Decision'] = 'Opened'
@@ -56,6 +58,7 @@ def compare_strategies(N: int, K: int, n_sim: int, switch:bool):
     strategies = ["stay", "switch", "random"]
     data = []
 
+    # Simulate for all strategies
     for s in strategies:
         result = run_simulation(N, K, s, n_sim, switch)
         data.append({

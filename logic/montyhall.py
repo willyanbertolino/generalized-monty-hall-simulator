@@ -13,7 +13,6 @@ def apply_strategy(strategy, N, player_choice, revealed):
     # Doors the player could switch to
     options = list(all_doors - revealed - {player_choice})
     
-    # STRATEGY:
     # always stay
     if strategy == "stay":
         return player_choice
@@ -40,13 +39,14 @@ def play_once(N, K, strategy, switch):
     player_choices = [player_choice]
     revealed_doors = []
     final_choice = player_choice
+
     # Reveal goats
     revealed_set = set()
     for i in range(K):
         reveal_one = goat_reveals(N, revealed_set, final_choice, prize_door)
-        print(f'revealed {reveal_one}')
         revealed_doors.append(reveal_one)
         revealed_set.add(reveal_one)
+        
         if switch:
             final_choice = apply_strategy(strategy, N, final_choice, revealed_set)
             player_choices.append(final_choice)
